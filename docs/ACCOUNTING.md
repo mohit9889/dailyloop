@@ -65,3 +65,7 @@ Also verify Google login/logout/expiry and M2 pause/override/date-picker behavio
 Read-only Supabase preflight confirms migrations 0001/0002 match their applied checksums and 0003 is pending. No live financial records are added by this increment. After the independent-connection test and owner authorization for migration 0003, use the existing migration runner, verify runtime grants/RLS/readiness, restart API, then refresh clients. No additional paid service is required. Preserve restricted serving credentials and verified TLS.
 
 A migration alone enables features.accounting, so do not apply it as an incidental deployment before the verification/authorization step. Do not manually insert test financial postings into live data as a demonstration. Store/public pilot, backups/restore, privacy and M4 offline/export gates remain separate.
+
+## Approved activation — 29 October 2026
+
+Owner reported the independent-connection PostgreSQL suite PASS from the laptop terminal, then explicitly approved migrations 0003/0004. Both applied successfully. Restricted runtime readiness, enabled accounting/workspace features and RLS on new tables were verified. Existing five customers/seven plans remain; zero money events. Local API restarted. Physical-device, two-live-identity, hosted and pilot-cycle evidence remain open.

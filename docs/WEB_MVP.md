@@ -26,8 +26,8 @@ PDF QA rendered a three-page synthetic statement and inspected its page breaks, 
 
 ## Pending activation/publication
 
-Migrations 0003_accounting.sql and 0004_web_workspace.sql require explicit owner authorization before live application. The latter adds settings/request protections, recent-auth markers and an operator-only deletion journal; it does not delete existing records. Existing cloud customers/plans remain usable until activation. Production startup refuses an environment missing the workspace schema.
+Owner explicitly approved live migrations and GitHub publication on 29 October 2026. Migrations 0003/0004 were applied successfully through the checksum-verified runner. All six new application tables have RLS enabled. Restricted runtime readiness passed; accounting/workspace feature availability is true. Unauthenticated runtime queries see zero customers/requests. Existing records remain five customers, seven plans and zero money events. The local API and desktop server restarted successfully.
 
-The provided GitHub remote is https://github.com/mohit9889/dailyloop.git. Initialize/commit after exclusion/security checks, then push only with owner authorization. No force push, paid plan, automatic store enrollment or hosting purchase is part of completion. Render Free is the selected hosting baseline; its blueprint uses a clean scoped web install so Expo tooling is not required for deployment.
+Initial commit ff8c77c was pushed to main at https://github.com/mohit9889/dailyloop. Secrets, private backups and keys were excluded. Public hosting has not been deployed. No paid services or account erasure were performed.
 
 Before external pilot onboarding: replace the placeholder contact with a monitored address/operator identity, configure the actual HTTPS provider origin and Supabase redirect allowlist, verify hosted OAuth/two-account isolation/export permissions, copy encrypted backups and key to separate offline custody, verify provider Auth recovery and observe a reconciled billing cycle. Read OPERATIONS.md and WEB_DEPLOY.md. These are not silently marked passed because local code builds.

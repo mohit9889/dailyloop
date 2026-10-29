@@ -11,3 +11,7 @@
 Latest regular tests: **30 passed**. Workspace type checks, production build, Android/iOS exports passed. Browser QA used isolated test data and verified charge/receipt/reversal reconciliation. The separate real-Postgres test did not run successfully; no concurrency sign-off is claimed. See ACCOUNTING.md for the exact local command and rollout sequence.
 
 Next steps: run the provided PostgreSQL test in the laptop terminal; validate physical device and second-identity flows; authorize/apply 0003 after reviewing evidence. Continue M4 offline delivery/conflicts/PDF/CSV and M5 recovery/privacy/release hardening afterward. Existing customer/plan test data is preserved; no live billing records or paid services were created.
+
+## Latest activation update — 29 October 2026
+
+The preceding table records pre-activation gaps. Owner-reported real PostgreSQL test: PASS. Regular suite: 39 passed; workspace types/build passed. Owner-approved live migrations 0003/0004 and initial GitHub push are complete. Runtime readiness, accounting/workspace availability, new-table RLS and preservation of five customers/seven plans were verified. Local services restarted. Public hosting, two-live-identity, physical-device and pilot evidence remain open. Web PDF/CSV, requests and encrypted backup/isolated restore are implemented; see WEB_MVP.md.
