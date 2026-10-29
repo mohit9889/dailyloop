@@ -1,0 +1,463 @@
+.detail-shell {
+  min-height: 100vh;
+  background: var(--canvas);
+}
+.detail-top {
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid #e4e9df;
+}
+.detail-main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px 40px 35px;
+}
+.back-text {
+  border: 0;
+  padding-left: 0;
+  font-size: 13px;
+  color: var(--quiet);
+}
+.detail-heading {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 24px 0 35px;
+}
+.detail-heading h1 {
+  font-size: 33px;
+  letter-spacing: -1px;
+  margin: 12px 0;
+}
+.detail-heading p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: var(--quiet);
+}
+.detail-actions {
+  display: flex;
+  gap: 8px;
+}
+.plans-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 25px 0 22px;
+}
+.plans-heading h2 {
+  font-size: 19px;
+  margin: 0;
+}
+.plans-heading h2 > span {
+  background: #eef4e5;
+  font-size: 13px;
+  padding: 4px 7px;
+  border-radius: 10px;
+  margin-left: 7px;
+}
+.plans-heading p {
+  font-size: 13px;
+  margin: 8px 0 0;
+  color: var(--quiet);
+}
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.plan-card {
+  background: var(--surface);
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--forest);
+  border-radius: 14px;
+  min-width: 0;
+}
+.plan-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.plan-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background: #eff4e8;
+  color: var(--quiet);
+  border-radius: 11px;
+}
+.plan-badge {
+  display: inline-block;
+  background: #f2f5ec;
+  color: var(--quiet);
+  padding: 6px 9px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+.plan-card h3 {
+  font-size: 20px;
+  margin: 20px 0 12px;
+}
+.plan-card p {
+  font-size: 13px;
+  color: var(--quiet);
+  line-height: 1.8;
+}
+.plan-quantity {
+  font-size: 16px !important;
+  color: #44693b !important;
+  font-weight: 500;
+}
+.plan-quantity span {
+  font-size: 13px;
+  font-weight: 400;
+}
+.plan-dates {
+  font-size: 13px !important;
+}
+.plan-next {
+  padding: 12px;
+  background: #f6f9ef;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--quiet);
+  line-height: 1.8;
+  margin-top: 12px;
+}
+.plan-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+.plan-controls button {
+  font-size: 13px;
+  min-height: 44px;
+  padding: 8px 11px;
+}
+.plan-card details {
+  margin-top: 16px;
+  border-top: 1px solid #edf1e7;
+  padding-top: 14px;
+  font-size: 13px;
+  color: var(--quiet);
+}
+.plan-card summary {
+  cursor: pointer;
+  min-height: 44px;
+}
+.revision-row > strong,
+.revision-row > span,
+.revision-row > small {
+  display: block;
+  font-size: 13px;
+}
+.revision-row strong {
+  font-weight: 500;
+  color: var(--quiet);
+}
+.revision-row small {
+  font-size: 13px;
+  color: var(--quiet);
+}
+.pause-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.pause-row p {
+  font-size: 13px;
+}
+.pause-row small {
+  display: block;
+}
+.pause-row button {
+  min-height: 44px;
+  font-size: 13px;
+}
+.plans-empty {
+  padding: 45px;
+  text-align: center;
+  border: 1px dashed #dae4cf;
+  border-radius: 14px;
+  color: var(--quiet);
+}
+.plans-empty h3 {
+  font-size: 16px;
+  color: var(--quiet);
+  margin: 17px 0;
+}
+.plans-empty p {
+  font-size: 13px;
+}
+.schedule-section {
+  background: var(--surface);
+  border-radius: 16px;
+  margin-top: 40px;
+  border-top: 1px solid #e7ecdf;
+  padding-top: 16px;
+  scroll-margin-top: 20px;
+}
+.schedule-filters {
+  display: flex;
+  gap: 12px;
+}
+.schedule-filters label {
+  font-size: 13px;
+  color: var(--quiet);
+  margin: 0;
+}
+.schedule-filters input,
+.schedule-filters select {
+  min-height: 44px;
+  font-size: 13px;
+  padding: 9px;
+  width: auto;
+}
+.schedule-table {
+  overflow: auto;
+  border: 1px solid #e4ebdc;
+  border-radius: 11px;
+  margin-top: 16px;
+}
+.schedule-table table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  text-align: left;
+}
+.schedule-table th {
+  font-size: 13px;
+  background: #f7f9f3;
+  padding: 13px 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--quiet);
+  border-bottom: 1px solid #e4ebdc;
+}
+.schedule-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #eef2e7;
+  font-size: 13px;
+  color: var(--quiet);
+}
+.schedule-table td small {
+  display: block;
+  font-size: 13px;
+  color: var(--quiet);
+  margin-top: 4px;
+}
+.schedule-status {
+  font-size: 13px;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 5px 8px;
+  background: #f1f4eb;
+  border-radius: 12px;
+  color: var(--quiet);
+}
+.schedule-status.scheduled {
+  color: var(--quiet);
+  background: #edf4e3;
+}
+.schedule-status.paused,
+.schedule-status.skipped {
+  color: #7d631e;
+  background: #faf6e7;
+}
+.lifecycle-dialog {
+  padding: 28px;
+  border: 1px solid #dfe7d4;
+  border-radius: 16px;
+  width: 700px;
+  max-width: calc(100vw - 36px);
+  max-height: 90vh;
+  box-sizing: border-box;
+  color: #33533a;
+  overflow: auto;
+}
+.lifecycle-dialog::backdrop {
+  background: #153b2566;
+  backdrop-filter: blur(3px);
+}
+.lifecycle-dialog label {
+  display: block;
+  font-size: 13px;
+  margin: 18px 0 8px;
+}
+.lifecycle-dialog input,
+.lifecycle-dialog select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 45px;
+  padding: 12px;
+  font: inherit;
+  font-size: 14px;
+  border: 1px solid #dce6d1;
+  border-radius: 9px;
+  background: #fff;
+  color: var(--quiet);
+}
+.lifecycle-dialog fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+.lifecycle-dialog fieldset:disabled {
+  opacity: 0.65;
+}
+.lifecycle-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.lifecycle-dialog .weekday-field {
+  border: 1px solid #e2e9d7;
+  border-radius: 10px;
+  margin: 20px 0 0;
+  padding: 12px;
+}
+.weekday-field legend {
+  font-size: 13px;
+  padding: 0 5px;
+}
+.weekday-options {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.lifecycle-dialog .weekday-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 13px;
+  min-height: 44px;
+}
+.lifecycle-dialog .weekday-options input {
+  width: 16px;
+  min-height: 16px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--forest);
+}
+.form-note {
+  font-size: 13px;
+  color: var(--quiet);
+  line-height: 1.9;
+}
+.archive-warning {
+  background: #fbf5e5;
+  padding: 14px;
+  border-radius: 9px;
+  color: #7d631e;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.review-section {
+  border-top: 1px solid #e4eadd;
+  margin-top: 25px;
+  padding-top: 20px;
+}
+.review-section h3 {
+  font-size: 16px;
+  margin: 0;
+}
+.review-section > p {
+  font-size: 13px;
+  color: var(--quiet);
+  line-height: 1.8;
+}
+.review-section .schedule-table th,
+.review-section .schedule-table td {
+  padding: 12px 10px;
+  font-size: 13px;
+}
+.register-table td .customer-open {
+  background: none;
+  border: 0;
+  padding: 0;
+  min-height: 44px;
+  text-align: left;
+  font-size: 13px;
+  color: #315b37;
+}
+.register-table td .customer-open:hover {
+  text-decoration: underline;
+}
+.customer-archive-label {
+  display: block;
+  font-size: 13px;
+  color: #7d631e;
+  margin-top: 5px;
+}
+@media (max-width: 800px) {
+  .detail-top {
+    background: var(--surface);
+    padding: 18px 20px;
+  }
+  .detail-top img {
+    width: 170px;
+    height: auto;
+  }
+  .detail-main {
+    padding: 20px;
+  }
+  .detail-heading,
+  .plans-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .detail-heading h1 {
+    font-size: 28px;
+  }
+  .detail-actions {
+    flex-wrap: wrap;
+  }
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+  .schedule-filters {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .schedule-filters label {
+    flex: 1;
+    min-width: 130px;
+  }
+  .schedule-filters input,
+  .schedule-filters select {
+    width: 100%;
+  }
+  .lifecycle-dialog {
+    padding: 20px;
+  }
+  .lifecycle-fields {
+    grid-template-columns: 1fr;
+  }
+  .weekday-options {
+    gap: 10px;
+  }
+  .plan-controls button {
+    min-height: 44px;
+  }
+  .lifecycle-dialog .dialog-heading h2 {
+    font-size: 20px;
+  }
+  .detail-actions button {
+    font-size: 13px;
+  }
+}

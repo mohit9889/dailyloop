@@ -1,0 +1,32 @@
+{
+  "name": "dailyloop",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "backend",
+    "desktop",
+    "mobile",
+    "packages/contracts"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,desktop \"npm run dev -w backend\" \"npm run dev -w desktop\"",
+    "test": "npm test -w backend",
+    "typecheck": "npm run typecheck --workspaces",
+    "build": "npm run build -w @dailyloop/contracts && npm run build -w @dailyloop/backend && npm run build -w @dailyloop/desktop",
+    "mobile": "npm run dev -w mobile",
+    "format": "prettier --write \"backend/{src,tests,scripts}/**/*.ts\" \"packages/contracts/src/**/*.ts\" \"desktop/src/**/*.{ts,tsx,css}\" \"mobile/{App.tsx,src/**/*.ts,src/**/*.tsx}\"",
+    "predev": "npm run build -w @dailyloop/contracts",
+    "premobile": "npm run build -w @dailyloop/contracts",
+    "mobile:bundle": "npm run build -w @dailyloop/contracts && npm run bundle -w @dailyloop/mobile"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0",
+    "prettier": "^3.6.0"
+  }
+}

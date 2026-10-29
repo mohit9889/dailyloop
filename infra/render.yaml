@@ -1,0 +1,30 @@
+# Import manually after reviewing settings. This file never deploys or purchases resources.
+services:
+  - type: web
+    name: dailyloop
+    runtime: node
+    plan: free
+    repo: https://github.com/mohit9889/dailyloop
+    branch: main
+    buildCommand: npm ci --include=dev --workspace @dailyloop/backend --workspace @dailyloop/desktop --workspace @dailyloop/contracts --include-workspace-root && npm run build
+    startCommand: npm run start -w @dailyloop/backend
+    healthCheckPath: /health/ready
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: APP_ORIGIN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: SESSION_ENCRYPTION_KEY
+        sync: false
+      - key: SUPPORT_EMAIL
+        sync: false

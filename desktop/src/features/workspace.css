@@ -1,0 +1,75 @@
+.workspace-main {
+  max-width: 960px;
+}
+.workspace-main p {
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.workspace-main h1 {
+  font-size: clamp(28px, 4vw, 38px);
+}
+.workspace-main h2 {
+  font-size: 23px;
+  margin-top: 28px;
+}
+.workspace-main fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.workspace-main input,
+.workspace-main select,
+.workspace-main textarea {
+  display: block;
+  width: 100%;
+  margin: 8px 0 18px;
+}
+.workspace-main textarea {
+  font: inherit;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  resize: vertical;
+  color: var(--text);
+  background: var(--surface);
+}
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-block: 16px;
+}
+.legal-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+}
+.request-item {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+}
+.request-item small {
+  display: block;
+  overflow-wrap: anywhere;
+  color: var(--quiet);
+  margin-bottom: 12px;
+}
+
+.pending-save-banner {
+  padding: 18px 28px;
+  border-bottom: 2px solid var(--forest);
+  background: var(--warning-soft);
+  color: var(--text);
+}
+.pending-save-banner p {
+  max-width: 900px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+.pending-save-banner small {
+  display: block;
+  overflow-wrap: anywhere;
+  margin-top: 10px;
+}
+.pending-save-banner { position: relative; z-index: 90; }

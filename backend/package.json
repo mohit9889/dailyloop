@@ -1,0 +1,41 @@
+{
+  "name": "@dailyloop/backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --env-file-if-exists=.env src/server.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "dev:watch": "node --watch --experimental-strip-types src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "db:migrate": "tsx --env-file-if-exists=.env scripts/migrate.ts",
+    "db:create-runtime": "tsx --env-file-if-exists=.env scripts/create-runtime.ts",
+    "test:postgres": "node --import tsx --test tests/postgres.integration.ts",
+    "backup:create": "node --import tsx --env-file-if-exists=.env scripts/backup.ts create",
+    "backup:verify": "node --import tsx scripts/backup.ts verify",
+    "operator": "node --import tsx --env-file-if-exists=.env scripts/operator.ts"
+  },
+  "dependencies": {
+    "@dailyloop/contracts": "*",
+    "@fastify/cookie": "^11.0.0",
+    "@fastify/rate-limit": "^10.0.0",
+    "@fastify/static": "^10.1.8",
+    "@supabase/supabase-js": "^2.118.0",
+    "drizzle-orm": "^0.45.4",
+    "fastify": "^5.6.0",
+    "jose": "^6.1.0",
+    "pdfkit": "^0.20.2",
+    "pg": "^8.16.0",
+    "svg-to-pdfkit": "^0.1.8",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.13",
+    "@types/pdfkit": "^0.17.7",
+    "@types/pg": "^8.15.0",
+    "@types/svg-to-pdfkit": "^0.1.4",
+    "embedded-postgres": "^18.4.0-beta.17",
+    "tsx": "^4.20.0"
+  }
+}

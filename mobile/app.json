@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "DailyLoop",
+    "slug": "dailyloop",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dailyloop.app"
+    },
+    "android": {
+      "package": "com.dailyloop.app"
+    },
+    "icon": "./assets/brand/dailyloop-icon.png",
+    "plugins": [
+      "expo-secure-store",
+      "expo-web-browser",
+      "@react-native-community/datetimepicker"
+    ],
+    "scheme": "dailyloop"
+  }
+}
